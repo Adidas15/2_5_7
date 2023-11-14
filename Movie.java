@@ -1,15 +1,15 @@
 //Aditya Das and Jonathan Adrian
-public class Book
+public class Movie
 {
   private String title;
-  private String author;
+  private double duration;
   private int rating;
   
   /*** Constructor ****/
-  public Book(String t, String a)
+  public Movie(String t, double d)
   {
     title = t;
-    author = a;
+    duration = d;
     rating = 0;
   }
   
@@ -18,8 +18,8 @@ public class Book
     return title;
   }
 
-  public String getAuthor() {
-    return author;
+  public double getDuration() {
+    return duration;
   }
   
   public int getRating() {
@@ -28,10 +28,10 @@ public class Book
   
   public String toString() 
   {
-    String info = "\"" + title + "\", written by " + author;
+    String info = "\"" + title + "\" is " + duration + " hours long";
     if (rating != 0) 
     { 
-      info += ", rating is " + rating;
+      info += ", and the rating is " + rating;
     }
     return info;
   }
@@ -41,13 +41,11 @@ public class Book
     title = t;
   }
 
-  public void setAuthor(String a) {
-    author = a;
+  public void setDuration(double d) {
+    duration = d;
   }
 
   public void adjustRating(int rating) {
     this.rating += rating;
   }
-
-
 }
