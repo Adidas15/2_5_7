@@ -1,26 +1,19 @@
 //Aditya Das and Jonathan Adrian
-public class Book
+public class Song
 {
   private String title;
-  private String author;
   private int rating;
   
   /*** Constructor ****/
-  public Book(String t, String a)
+  public Song(String t)
   {
     title = t;
-    author = a;
     rating = 0;
-    System.out.println("Adding book " + t);
   }
   
    /*** Accessor methods ***/
   public String getTitle() {
     return title;
-  }
-
-  public String getAuthor() {
-    return author;
   }
   
   public int getRating() {
@@ -29,7 +22,7 @@ public class Book
   
   public String toString() 
   {
-    String info = "\"" + title + "\", written by " + author;
+    String info = "\"" + title + "\"";
     if (rating != 0) 
     { 
       info += ", rating is " + rating;
@@ -42,20 +35,9 @@ public class Book
     title = t;
   }
 
-  public void setAuthor(String a) {
-    author = a;
-  }
-
   public void adjustRating(int rating) {
-    System.out.println("Adjusting rating by " + rating);
     this.rating += rating;
   }
-
-  /* 
-  public String getInfo()
-  {
-    return "The current book information is " + info;
-  }*/
 
 
 }

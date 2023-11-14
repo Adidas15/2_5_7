@@ -5,6 +5,8 @@ public class MediaLib
 
   private Movie movie;
 
+  private Song song;
+
   public void addBook(Book b)
   {
     //Step 23
@@ -38,6 +40,22 @@ public class MediaLib
     movie = m;
   }
 
+  public void addSong(Song s) {
+    //Step 23
+    if (song==null){
+      numEntries+=1;  //Step 15
+      song = s;
+    }
+    else {
+      System.out.println("You already entered a song!");
+    }
+     
+  }
+
+  public void changeSong(Song s) {
+    song = s;
+  }
+
   public String toString() 
   {
     String info = "";
@@ -47,6 +65,9 @@ public class MediaLib
     if (movie!=null){
       info += movie.toString();
     } 
+    if (song!=null){
+      info += song.toString();
+    }
     return info;
   }
 
