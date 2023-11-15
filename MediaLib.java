@@ -7,6 +7,12 @@ public class MediaLib
 
   private Song song;
 
+  private String date;
+
+  public MediaLib() {
+    date = Dater.getDate();
+  }
+
   public void addBook(Book b)
   {
     //Step 23
@@ -58,7 +64,8 @@ public class MediaLib
 
   public String toString() 
   {
-    String info = "";
+    String info = owner + "'s Library was created on " + date + " .";
+    info += " It contains: \n";
     if (book!=null) {
       info += book.toString();
     }
@@ -94,4 +101,9 @@ public class MediaLib
     //System.out.println("test: Book is " + book);
     return numEntries;
   }
+
+  
+
+
+
 }
